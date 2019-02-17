@@ -3,6 +3,7 @@ package com.glqdlt.ex.model.account;
 import lombok.Data;
 import org.springframework.util.StringUtils;
 
+import javax.persistence.Entity;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * 2019-02-18
  */
 @Data
+@Entity
 public class Account {
 
     private Long no;

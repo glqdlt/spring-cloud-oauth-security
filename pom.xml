@@ -8,5 +8,42 @@
     <artifactId>spring-oauth-security</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>glqdlt</id>
+            <name>jhun</name>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.glqdlt.ex</groupId>
+            <artifactId>model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!-- @see https://stackoverflow.com/questions/2619598/differences-between-dependencymanagement-and-dependencies-in-maven -->
+    <!-- @see https://www.baeldung.com/spring-boot-multiple-modules-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <type>pom</type>
+                <version>2.0.2.RELEASE</version>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
